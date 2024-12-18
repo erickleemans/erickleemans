@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Leemans - Senior Network Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animated Background */
+        @keyframes moveBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: moveBackground 15s ease infinite;
+            perspective: 1000px;
+        }
+
+        /* Certification Card Hover Effects */
+        .cert-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05) rotateX(10deg);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            z-index: 10;
+        }
+
+        /* Particle Background Overlay */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Social and Theme Links -->
+    <div class="fixed top-4 right-4 z-50 flex space-x-2">
+        <a href="https://www.linkedin.com/in/erickleemans" target="_blank" class="bg-blue-500 text-white p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+        </a>
+        <a href="https://github.com/erickleemans" target="_blank" class="bg-gray-800 text-white p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+    </div>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <div class="max-w-5xl mx-auto p-8 relative z-10">
+        <div class="bg-white bg-opacity-90 shadow-2xl rounded-2xl p-8">
+            <header class="text-center mb-10 bg-white p-6 rounded-xl shadow-md">
+                <div class="flex justify-center mb-4">
+                    <img 
+                        src="Erick_Leemans.jpg" 
+                        alt="Erick Leemans" 
+                        class="rounded-full border-4 border-blue-500 w-48 h-48 object-cover shadow-lg"
+                    />
+                </div>
+                <h1 class="text-4xl font-bold text-blue-800">Erick Leemans</h1>
+                <p class="text-xl text-blue-600">Senior Network Engineer</p>
+                <p class="text-md text-gray-600 flex items-center justify-center gap-2 mt-2">
+                    📍 Level-7 Wireless (Pty) Ltd, Centurion, Gauteng, South Africa
+                </p>
+            </header>
+
+            <section class="mb-10 bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4 flex items-center text-blue-700">
+                    💼 Professional Summary
+                </h2>
+                <p class="text-gray-700 leading-relaxed">
+                    A passionate technology professional with over five years of hands-on experience in IT and telecommunications. 
+                    Currently expanding my expertise through advanced network certifications, including the MikroTik Certified Routing Expert (MTCRE) 
+                    and preparing for Juniper JNCIA and JNCIS-SP. Specialising in innovative solutions for call centres, including OmniChannel 
+                    products and spam protection technologies.
+                </p>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <section class="bg-white p-6 rounded-xl shadow-md">
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4 flex items-center text-blue-700">
+                        🏆 Certifications
+                    </h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-md text-center bg-blue-50 cert-card">
+                            <img src="mtcna.jpeg" alt="MTCNA" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">MikroTik Certified Network Associate (MTCNA)</p>
+                            <p class="text-xs text-gray-600">November 2024</p>
+                        </div>
+                        <div class="p-4 rounded-md text-center bg-yellow-50 border-2 border-yellow-200 cert-card">
+                            <img src="https://via.placeholder.com/100x100?text=MTCRE" alt="MTCRE" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">MikroTik Certified Routing Expert (MTCRE)</p>
+                            <p class="text-xs text-gray-600">In Progress</p>
+                        </div>
+                        <div class="p-4 rounded-md text-center bg-yellow-50 border-2 border-yellow-200 cert-card">
+                            <img src="https://via.placeholder.com/100x100?text=JNCIA" alt="JNCIA" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">Juniper JNCIA (Planned)</p>
+                            <p class="text-xs text-gray-600">Upcoming</p>
+                        </div>
+                        <div class="p-4 rounded-md text-center bg-yellow-50 border-2 border-yellow-200 cert-card">
+                            <img src="https://via.placeholder.com/100x100?text=JNCIS-SP" alt="JNCIS-SP" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">Juniper JNCIS-SP (Planned)</p>
+                            <p class="text-xs text-gray-600">Upcoming</p>
+                        </div>
+                       <div class="p-4 rounded-md text-center bg-blue-50 cert-card">
+						<div class="relative group">
+							<img src="zabbix.jpeg" alt="Zabbix" class="mx-auto mb-2 w-16 h-16 object-contain transition-transform duration-300 ease-in-out group-hover:scale-600"/>
+							</div>
+							<p class="font-medium text-sm">Zabbix 7 Application and Network Monitoring</p>
+							<p class="text-xs text-gray-600">Recent</p>
+						</div>
+
+
+                        <div class="p-4 rounded-md text-center bg-blue-50 cert-card">
+                            <img src="comptia_Aplus.jpg" alt="CompTIA" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">CompTIA A+</p>
+                            <p class="text-xs text-gray-600">2019</p>
+                        </div>
+                        <div class="p-4 rounded-md text-center bg-blue-50 cert-card">
+                            <img src="udemy_hacker.jpeg" alt="Cyber" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">Cyber Security Course</p>
+                            <p class="text-xs text-gray-600">Recent</p>
+                        </div>
+                        <div class="p-4 rounded-md text-center bg-blue-50 cert-card">
+                            <img src="flowgear.png" alt="Flowgear" class="mx-auto mb-2 w-16 h-16 object-contain"/>
+                            <p class="font-medium text-sm">Flowgear Certified</p>
+                            <p class="text-xs text-gray-600">Recent</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-white p-6 rounded-xl shadow-md">
+                    <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4 flex items-center text-blue-700">
+                        💻 Key Skills
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colours">Voice over IP (VoIP)</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colours">Network Troubleshooting</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colours">Project Coordination</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colours">MySQL</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colours">ConnectWise</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colours">Jira</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Cybersecurity Resources Section -->
+            <section class="bg-white p-6 rounded-xl shadow-md mt-8">
+                <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4 flex items-center text-blue-700">
+                    🌐 Cybersecurity Resources
+                </h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="https://www.sans.org" target="_blank" class="bg-blue-100 p-4 rounded-lg hover:bg-blue-200 transition-colors">
+                        <h3 class="font-semibold text-blue-800">SANS Institute</h3>
+                        <p class="text-sm text-gray-600">Leading cybersecurity training</p>
+                    </a>
+                    <a href="https://www.cisa.gov" target="_blank" class="bg-blue-100 p-4 rounded-lg hover:bg-blue-200 transition-colors">
+                        <h3 class="font-semibold text-blue-800">CISA</h3>
+                        <p class="text-sm text-gray-600">Cybersecurity & Infrastructure Security</p>
+                    </a>
+                    <a href="https://www.virustotal.com" target="_blank" class="bg-blue-100 p-4 rounded-lg hover:bg-blue-200 transition-colors">
+                        <h3 class="font-semibold text-blue-800">VirusTotal</h3>
+                        <p class="text-sm text-gray-600">Online Virus, Malware & URL Scanner</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Inspirational Quote Section -->
+            <section class="bg-white p-6 rounded-xl shadow-md mt-8 text-center">
+                <blockquote class="italic text-xl text-gray-700 mb-4">
+                    "In the world of cybersecurity, the only constant is change. Stay curious, stay learning."
+                </blockquote>
+                <p class="text-gray-500">— Erick Leemans</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particle Background Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                move: { 
+                    enable: true, 
+                    speed: 6, 
+                    direction: 'none', 
+                    random: false, 
+                    straight: false, 
+                    out_mode: 'out', 
+                    bounce: false 
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { 
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true 
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+		
+</body>
+</html>
